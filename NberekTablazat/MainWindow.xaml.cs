@@ -37,13 +37,20 @@ namespace NberekTablazat
 			string name = TBName.Text;
 			int age = Convert.ToInt32(TBAge.Text);
 
-			MessageBox.Show(name + "+" + age);
-			Nber nber = new Nber(name, age);
-			lista.Add(nber);
-			nberek.Items.Refresh();
-
-
-
+			if (age > 0 && age < 200 && !(name.Equals(null)) && !(age.Equals(null)))
+			{
+				MessageBoxResult choose = MessageBox.Show(name + "+" + age, "Biztos?", MessageBoxButton.YesNo);
+				if (choose == MessageBoxResult.Yes)
+				{
+					Nber nber = new Nber(name, age);
+					lista.Add(nber);
+					nberek.Items.Refresh();
+				}
+			}
+			else
+			{
+				MessageBox.Show("Hibás adatok!!!!", "Error");
+			}
 		}
 	}
 }
