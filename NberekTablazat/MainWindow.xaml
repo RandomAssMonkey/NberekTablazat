@@ -22,7 +22,7 @@
 		<Label Content="Kor:" HorizontalAlignment="Left" Margin="4,22,0,0" VerticalAlignment="Top"/>
 		<TextBox x:Name="TBAge" HorizontalAlignment="Left" Margin="69,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 		<Button x:Name="Button_HozzáAd" Content="Hozzáad" HorizontalAlignment="Left" Margin="232,0,0,0" VerticalAlignment="Center" Click="Button_HozzáAd_Click"/>
-		<Button x:Name="Button_Torol" Content="Törlés" HorizontalAlignment="Left" Margin="365,13,0,0" VerticalAlignment="Top"/>
+		<Button x:Name="Button_Torol" Content="Törlés" HorizontalAlignment="Left" Margin="365,13,0,0" VerticalAlignment="Top" Click="Button_Torol_Click"/>
 
 	</Grid>
 </Window>

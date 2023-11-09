@@ -52,5 +52,23 @@ namespace NberekTablazat
 				MessageBox.Show("Hibás adatok!!!!", "Error");
 			}
 		}
+
+		private void Button_Torol_Click(object sender, RoutedEventArgs e)
+		{
+			Nber selected = nberek.SelectedItem as Nber;
+			if (selected != null)
+			{
+				MessageBoxResult result = MessageBox.Show(selected.Nev + " " + selected.Kor, "Biztos?", MessageBoxButton.YesNo);
+				if (result == MessageBoxResult.Yes)
+				{
+					lista.Remove(selected);
+					nberek.Items.Refresh();
+				}
+			}
+			else
+			{
+				MessageBox.Show("Válaszd ki a törölni kivánt adatot!", "Error");
+			}
+		}
 	}
 }
